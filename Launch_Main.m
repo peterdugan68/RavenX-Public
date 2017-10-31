@@ -90,6 +90,6 @@ if strcmpi(mode, 'detect')
         silbido_init;
     end
     
-    DeLMA_App;
+DeLMA_App;
     
 end
