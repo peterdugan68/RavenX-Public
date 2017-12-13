@@ -1,16 +1,3 @@
-[submodule "rxutils"]
-	path = rxutils
-	url = https://peterdugan68@bitbucket.org/peterdugan68/rxutils.git
-	branch = master
-[submodule "extern/vlfeat"]
-	path = extern/vlfeat
-	url = https://peterdugan68@bitbucket.org/peterdugan68/vlfeat.git
-[submodule "extern/silbido"]
-	path = extern/silbido
-	url = https://peterdugan68@bitbucket.org/peterdugan68/silbido.git
-[submodule "extern/gpl"]
-	path = extern/gpl
-	url = https://peterdugan68@bitbucket.org/peterdugan68/gpl.git
 [submodule "auto_detect"]
 	path = auto_detect
 	url = https://peterdugan68@bitbucket.org/peterdugan68/auto_detect.git
