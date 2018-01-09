@@ -34,6 +34,8 @@ path([submodule_dir, filesep, 'silbido'], path);
 path([submodule_dir, filesep, 'gpl', filesep, 'code'], path);
 path([submodule_dir, filesep, 'vlfeat' filesep, 'toolbox'], path);
 vl_setup;
+path([submodule_dir, filesep, 'horiharm'], path);
+
 
 % paths for acoustat
 path([hdir, filesep, 'auto_detect'], path);
