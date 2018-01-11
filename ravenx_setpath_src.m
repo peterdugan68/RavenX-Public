@@ -66,7 +66,7 @@ end
 if  strcmp(mode, 'batch')
     path([hdir, filesep, 'AENA', filesep, 'NoiseAnalyzer'], path)
     path([hdir, filesep, 'DCL', filesep, 'DeLMA'], path)
-    path([hdir, filesep, 'DCL', filesep, 'AlgClasses'], path)
+%     path([hdir, filesep, 'DCL', filesep, 'AlgClasses'], path)
     
     path([hdir, filesep, 'DCL'], path)    
     return
