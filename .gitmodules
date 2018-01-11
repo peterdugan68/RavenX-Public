@@ -16,6 +16,3 @@
 [submodule "extern/vlfeat"]
 	path = extern/vlfeat
 	url = https://peterdugan68@bitbucket.org/peterdugan68/vlfeat.git
-[submodule "extern/horiharm"]
-	path = extern/horiharm
-	url = https://peterdugan68@bitbucket.org/CLO-BRP/horiharm.git
