@@ -24,17 +24,16 @@ end
 
 % create the RavenX project folder
  hdir = fileparts(mfilename('fullpath'));
-%  RavenXProject(hdir);           
 
-% PJD add submodules 
+% add submodules 
 submodule_dir = [hdir filesep 'extern'];
-% submodule_dir = hdir;
 
 path([submodule_dir, filesep, 'silbido'], path);
 path([submodule_dir, filesep, 'gpl', filesep, 'code'], path);
-path([submodule_dir, filesep, 'vlfeat' filesep, 'toolbox'], path);
-vl_setup;
+path([submodule_dir, filesep, 'vlfeat' filesep, 'toolbox'], path); vl_setup;
 path([submodule_dir, filesep, 'horiharm'], path);
+path([submodule_dir, filesep, 'dtp1d'], path);
+path([submodule_dir, filesep, 'dtp1d' filesep, 'parameter files'], path);
 
 
 % paths for acoustat
@@ -42,16 +41,6 @@ path([hdir, filesep, 'auto_detect'], path);
 path([hdir, filesep, 'utilapps'], path);
 path([hdir, filesep, 'utilapps' filesep, 'Acoustat'], path);
 
-
-% path([submodule_dir, filesep, 'prba'], path);
-% path([submodule_dir, filesep, 'horiharm'], path);
-
-% if exist('ASE_Utils', 'dir')
-%     path([hdir, filesep, 'ASE_Utils'], path)
-% else
-%     disp('ASE_Utils not found');
-%     exit
-% end
 
 if exist('RXutils', 'dir')
     path([hdir, filesep, 'RXutils'], path)
