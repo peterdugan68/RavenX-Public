@@ -22,3 +22,9 @@
 [submodule "extern/dtp1d"]
 	path = extern/dtp1d
 	url = https://peterdugan68@bitbucket.org/peterdugan68/dtp1d.git
+[submodule "extern/asrpt"]
+	path = extern/asrpt
+	url = https://peterdugan68@bitbucket.org/peterdugan68/asrpt.git
+[submodule "extern/asr"]
+	path = extern/asr
+	url = https://peterdugan68@bitbucket.org/peterdugan68/asr.git

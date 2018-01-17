@@ -34,6 +34,9 @@ path([submodule_dir, filesep, 'vlfeat' filesep, 'toolbox'], path); vl_setup;
 path([submodule_dir, filesep, 'horiharm'], path);
 path([submodule_dir, filesep, 'dtp1d'], path);
 path([submodule_dir, filesep, 'dtp1d' filesep, 'parameter files'], path);
+path([submodule_dir, filesep, 'asr'], path);
+path([submodule_dir, filesep, 'asrpt'], path);
+
 
 
 % paths for acoustat
