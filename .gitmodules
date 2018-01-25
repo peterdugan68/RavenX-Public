@@ -7,9 +7,6 @@
 [submodule "rxutils"]
 	path = rxutils
 	url = https://peterdugan68@bitbucket.org/peterdugan68/rxutils.git
-[submodule "extern/gpl"]
-	path = extern/gpl
-	url = https://peterdugan68@bitbucket.org/peterdugan68/gpl.git
 [submodule "extern/vlfeat"]
 	path = extern/vlfeat
 	url = https://peterdugan68@bitbucket.org/peterdugan68/vlfeat.git
