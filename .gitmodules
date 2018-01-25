@@ -25,6 +25,6 @@
 [submodule "extern/+gpl"]
 	path = extern/+gpl
 	url = https://peterdugan68@bitbucket.org/peterdugan68/gpl.git
-[submodule "extern/+silbido"]
-	path = extern/+silbido
-	url = https://peterdugan68@bitbucket.org/peterdugan68/silbido.git
+[submodule "extern/silbido"]
+	path = extern/silbido
+	url = https://peterdugan68@bitbucket.org/peterdugan68/sibido.git
