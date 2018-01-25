@@ -10,12 +10,6 @@
 [submodule "extern/vlfeat"]
 	path = extern/vlfeat
 	url = https://peterdugan68@bitbucket.org/peterdugan68/vlfeat.git
-[submodule "extern/asrpt"]
-	path = extern/asrpt
-	url = https://peterdugan68@bitbucket.org/peterdugan68/asrpt.git
-[submodule "extern/asr"]
-	path = extern/asr
-	url = https://peterdugan68@bitbucket.org/peterdugan68/asr.git
 [submodule "extern/+asr"]
 	path = extern/+asr
 	url = https://peterdugan68@bitbucket.org/peterdugan68/asr.git
