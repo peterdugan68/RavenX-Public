@@ -28,3 +28,21 @@
 [submodule "extern/asr"]
 	path = extern/asr
 	url = https://peterdugan68@bitbucket.org/peterdugan68/asr.git
+[submodule "extern/+asr"]
+	path = extern/+asr
+	url = https://peterdugan68@bitbucket.org/peterdugan68/asr.git
+[submodule "extern/+horiharm"]
+	path = extern/+horiharm
+	url = https://peterdugan68@bitbucket.org/peterdugan68/horiharm.git
+[submodule "extern/+asrpt"]
+	path = extern/+asrpt
+	url = https://peterdugan68@bitbucket.org/peterdugan68/asrpt.git
+[submodule "extern/+dtp1d"]
+	path = extern/+dtp1d
+	url = https://peterdugan68@bitbucket.org/peterdugan68/dtp1d.git
+[submodule "extern/+gpl"]
+	path = extern/+gpl
+	url = https://peterdugan68@bitbucket.org/peterdugan68/gpl.git
+[submodule "extern/+silbido"]
+	path = extern/+silbido
+	url = https://peterdugan68@bitbucket.org/peterdugan68/silbido.git
