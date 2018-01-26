@@ -28,14 +28,15 @@ end
 % add submodules 
 submodule_dir = [hdir filesep 'extern'];
 
+path([submodule_dir], path);
 path([submodule_dir, filesep, 'silbido'], path);
-path([submodule_dir, filesep, 'gpl', filesep, 'code'], path);
+% path([submodule_dir, filesep, '+gpl', filesep, 'code'], path);
 path([submodule_dir, filesep, 'vlfeat' filesep, 'toolbox'], path); vl_setup;
-path([submodule_dir, filesep, 'horiharm'], path);
-path([submodule_dir, filesep, 'dtp1d'], path);
-path([submodule_dir, filesep, 'dtp1d' filesep, 'parameter files'], path);
-path([submodule_dir, filesep, 'asr'], path);
-path([submodule_dir, filesep, 'asrpt'], path);
+% path([submodule_dir, filesep, 'horiharm'], path);
+% path([submodule_dir, filesep, 'dtp1d'], path);
+% path([submodule_dir, filesep, '+dtp1d' filesep, 'parameter files'], path);
+% path([submodule_dir, filesep, 'asr'], path);
+% path([submodule_dir, filesep, 'asrpt'], path);
 
 
 
