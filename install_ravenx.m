@@ -1,6 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
-%%   RavenX Version   %%
+%%   RavenX setup     %%
+%%
+%% Initial creation pdugan 2018
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%
+
+% establish a version based on the parent path
 fp = fileparts(pwd);
 bs = fileparts(fp);
 Rxver = fp(length(bs)+2:end);
