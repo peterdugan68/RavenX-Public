@@ -44,6 +44,8 @@ path([submodule_dir, filesep, 'vlfeat' filesep, 'toolbox'], path); vl_setup;
 path([hdir, filesep, 'auto_detect'], path);
 path([hdir, filesep, 'utilapps'], path);
 path([hdir, filesep, 'utilapps' filesep, 'Acoustat'], path);
+path([hdir, filesep, 'utilapps' filesep, 'SelectionTableApp'], path);
+
 
 
 if exist('RXutils', 'dir')
