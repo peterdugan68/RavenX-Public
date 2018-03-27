@@ -14,7 +14,7 @@ Rxver = fp(length(bs)+2:end);
 % setup parms
 pth = pwd;
 sc_nme = [Rxver];
-exe = ['cd ' pth ';' 'Launch_Main(''detect'');'];
+exe = ['cd (''' pth ''');' 'Launch_Main(''detect'');'];
 
 % install shortcuts (Note: any stale shortcuts will cause this to error) 
 com.mathworks.mlwidgets.shortcuts.ShortcutUtils.addShortcutToBottom(sc_nme, exe, './checkout.gif', 'ravenx', 'true');
