@@ -28,3 +28,6 @@
 [submodule "extern/silbido"]
 	path = extern/silbido
 	url = https://peterdugan68@bitbucket.org/peterdugan68/silbido.git
+[submodule "extern/+erma"]
+	path = extern/+erma
+	url = https://peterdugan68@bitbucket.org/peterdugan68/erma.git
