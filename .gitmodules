@@ -31,3 +31,6 @@
 [submodule "extern/+erma"]
 	path = extern/+erma
 	url = https://peterdugan68@bitbucket.org/peterdugan68/erma.git
+[submodule "extern/+DATpkg"]
+	path = extern/+DATpkg
+	url = https://peterdugan68@bitbucket.org/peterdugan68/datpkg.git
