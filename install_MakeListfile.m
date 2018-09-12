@@ -1,4 +1,4 @@
-function install_acoustat(Rxver)
+function install_MakeListfile(Rxver)
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%   RavenX setup     %%
 %%
@@ -14,17 +14,17 @@ bs = fileparts(fp);
 Rxver = fp(length(bs)+2:end);
 %%%%%%%%%%%%%%%%%%%%%%%%
 end
-sc_cat = [Rxver];
+sc_cat = Rxver;
 
-sc_nme = 'Acoustat';
+sc_nme = 'MakeListfile';
 
 % setup parms
 pth = fullfile(pwd, 'utilapps');
-pth = fullfile(pth, 'Acoustat');
+pth = fullfile(pth, 'MakeListfile');
 
 
 % sc_nme = nme;
-exe = ['cd (''' pth ''');' 'Acoustat;'];
+exe = ['cd (''' pth ''');' 'MakeListfile;'];
 
 % install shortcuts (Note: any stale shortcuts will cause this to error) 
 com.mathworks.mlwidgets.shortcuts.ShortcutUtils.addShortcutToBottom(sc_nme, exe, './checkout.gif', sc_cat, 'true');

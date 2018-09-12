@@ -16,15 +16,15 @@ Rxver = fp(length(bs)+2:end);
 end
 sc_cat = Rxver;
 
-sc_nme = 'DetectorEval-APP';
+sc_nme = 'DetectEval';
 
 % setup parms
 pth = fullfile(pwd, 'utilapps');
-pth = fullfile(pth, 'SelectionTableApp');
+pth = fullfile(pth, 'DetectEval');
 
 
 % sc_nme = nme;
-exe = ['cd (''' pth ''');' 'SelectionTableApp;'];
+exe = ['cd (''' pth ''');' 'DetectorValidation;'];
 
 % install shortcuts (Note: any stale shortcuts will cause this to error) 
 com.mathworks.mlwidgets.shortcuts.ShortcutUtils.addShortcutToBottom(sc_nme, exe, './checkout.gif', sc_cat, 'true');

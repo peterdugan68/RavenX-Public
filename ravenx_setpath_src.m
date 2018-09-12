@@ -15,39 +15,60 @@ function ravenx_setpath_src(mode)
 %   PDugan       March 2011         Ver 1.2    Added mode variable for
 %                                              developers
 %   JZollweg     December 2011      Ver 1.3    Made mode variable an input
-%  CPopescu 2/4/2013 Reverted back
+%   CPopescu     Feb4 2013                     Reverted back
 %   JZollweg     August 2014        Ver 2.0    Add batch mode
+%   JZollweg     July 2018          Ver 2.1    Customized for RavenX-NA
+%   PDugan       Sept 2018                     Merged NA and AD for SPAWAR
+%                                              integration.
 
-if ~any(strcmp(mode, {'batch', 'detect', 'display', 'noise'}))
+if ~any(strcmp(mode, {'batch', 'detect', 'display', 'noise', 'all'}))
     mode = 'src';
 end
 
 % create the RavenX project folder
- hdir = fileparts(mfilename('fullpath'));
+hdir = fileparts(mfilename('fullpath'));
 
-% add submodules 
-submodule_dir = [hdir filesep 'extern'];
-
-path([submodule_dir], path);
-path([submodule_dir, filesep, 'silbido'], path);
-% path([submodule_dir, filesep, '+gpl', filesep, 'code'], path);
-path([submodule_dir, filesep, 'vlfeat' filesep, 'toolbox'], path); vl_setup;
-% path([submodule_dir, filesep, 'horiharm'], path);
-% path([submodule_dir, filesep, 'dtp1d'], path);
-% path([submodule_dir, filesep, '+dtp1d' filesep, 'parameter files'], path);
-% path([submodule_dir, filesep, 'asr'], path);
-% path([submodule_dir, filesep, 'asrpt'], path);
+% add external components
+extern_dir = [hdir filesep 'extern'];
+path([extern_dir], path);
+path([extern_dir, filesep, 'silbido'], path);
+path([extern_dir, filesep, 'vlfeat' filesep, 'toolbox'], path); vl_setup;
 
 
+% path for auto detect
+if exist('auto_detect', 'dir')
+    path([hdir, filesep, 'auto_detect'], path);
+else
+    disp('auto_detect not found');
+    exit
+end
 
-% paths for acoustat
-path([hdir, filesep, 'auto_detect'], path);
-path([hdir, filesep, 'utilapps'], path);
-path([hdir, filesep, 'utilapps' filesep, 'Acoustat'], path);
-path([hdir, filesep, 'utilapps' filesep, 'SelectionTableApp'], path);
+if exist('aena', 'dir')
+    path([hdir, filesep, 'aena'], path);
+else
+    disp('aena not found');
+    exit
+end
+
+if exist('noise_analyzer', 'dir')
+    path([hdir, filesep, 'noise_analyzer'], path);
+else
+    disp('noise_analyzer not found');
+    exit
+end
 
 
+% paths for utilapps and acoustat
+if exist('utilapps', 'dir')
+    path([hdir, filesep, 'utilapps'], path);
+    path([hdir, filesep, 'utilapps' filesep, 'Acoustat'], path);
+    path([hdir, filesep, 'utilapps' filesep, 'SelectionTableApp'], path);
+else
+    disp('utilapps not found');
+    exit
+end
 
+% paths for rxutils
 if exist('RXutils', 'dir')
     path([hdir, filesep, 'RXutils'], path)
     import utils.*;
@@ -57,13 +78,7 @@ else
 end
 
 
-
 if  strcmp(mode, 'batch')
-    path([hdir, filesep, 'AENA', filesep, 'NoiseAnalyzer'], path)
-    path([hdir, filesep, 'DCL', filesep, 'DeLMA'], path)
-%     path([hdir, filesep, 'DCL', filesep, 'AlgClasses'], path)
-    
-    path([hdir, filesep, 'DCL'], path)    
     return
 end
 

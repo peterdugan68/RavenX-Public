@@ -1,4 +1,4 @@
-function install_utilapps(Rxver)
+function install_RavenSoundSpeedCalculator(Rxver)
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%   RavenX setup     %%
 %%
@@ -14,18 +14,17 @@ bs = fileparts(fp);
 Rxver = fp(length(bs)+2:end);
 %%%%%%%%%%%%%%%%%%%%%%%%
 end
-
 sc_cat = Rxver;
 
-sc_nme = 'Table-APPS';
+sc_nme = 'RavenSoundSpeedCalculator';
 
 % setup parms
 pth = fullfile(pwd, 'utilapps');
-pth = fullfile(pth, 'SelectionTableApp');
+pth = fullfile(pth, 'RavenSoundSpeedCalculator');
 
 
 % sc_nme = nme;
-exe = ['cd (''' pth ''');' 'SelectionTableApp;'];
+exe = ['cd (''' pth ''');' 'RavenSoundSpeedCalculator;'];
 
 % install shortcuts (Note: any stale shortcuts will cause this to error) 
 com.mathworks.mlwidgets.shortcuts.ShortcutUtils.addShortcutToBottom(sc_nme, exe, './checkout.gif', sc_cat, 'true');
