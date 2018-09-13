@@ -26,6 +26,7 @@ ff.insertTool(0,pth)
 ff.setLabelVisible(pth,true);
 
 % install_utilapps package;
+install_DATpkg(sc_cat);
 install_acoustat(sc_cat);
 install_detEval(sc_cat);
 install_MakeCallcount(sc_cat);
