@@ -12,7 +12,7 @@
 	url = https://peterdugan68@bitbucket.org/CLO-BRP/asr.git
 [submodule "extern/+horiharm"]
 	path = extern/+horiharm
-	url = https://peterdugan68@bitbucket.org/peterdugan68/horiharm.git
+	url = https://peterdugan68@bitbucket.org/CLO-BRP/hori_harm.git
 [submodule "extern/+asrpt"]
 	path = extern/+asrpt
 	url = https://peterdugan68@bitbucket.org/CLO-BRP/asrpt.git
