@@ -1,9 +1,6 @@
 [submodule "auto_detect"]
 	path = auto_detect
 	url = https://peterdugan68@bitbucket.org/peterdugan68/auto_detect.git
-[submodule "utilapps"]
-	path = utilapps
-	url = https://peterdugan68@bitbucket.org/peterdugan68/utilapps.git
 [submodule "rxutils"]
 	path = rxutils
 	url = https://peterdugan68@bitbucket.org/peterdugan68/rxutils.git
