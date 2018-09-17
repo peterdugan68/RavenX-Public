@@ -37,6 +37,3 @@
 [submodule "aena"]
 	path = aena
 	url = https://peterdugan68@bitbucket.org/CLO-BRP/aena.git
-[submodule "utilapps"]
-	path = utilapps
-	url = https://peterdugan68@bitbucket.org/CLO-BRP/utilapps.git
