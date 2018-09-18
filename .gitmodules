@@ -33,10 +33,10 @@
 	url = git@bitbucket.org:CLO-BRP/datpkg.git
 [submodule "noise_analyzer"]
 	path = noise_analyzer
-	url = https://peterdugan68@bitbucket.org/CLO-BRP/noiseanalyzer.git
+	url = git@bitbucket.org:CLO-BRP/noiseanalyzer.git
 [submodule "aena"]
 	path = aena
-	url = https://peterdugan68@bitbucket.org/CLO-BRP/aena.git
+	url = git@bitbucket.org:CLO-BRP/aena.git
 [submodule "utilapps"]
 	path = utilapps
-	url = https://peterdugan68@bitbucket.org/CLO-BRP/utilapps_fork.git
+	url = git@bitbucket.org:CLO-BRP/utilapps.git
