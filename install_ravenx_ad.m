@@ -5,6 +5,8 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%
 
+hpc01 = 1;
+
 % establish a version based on the parent path
 fp = fileparts(pwd);
 bs = fileparts(fp);
