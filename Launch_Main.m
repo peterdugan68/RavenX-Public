@@ -43,6 +43,9 @@ function Launch_Main(mode)
 %   JZollweg August 2014
 %     Removed reference to XBAT and revised to allow running in batch
 %
+%   PDugan Sept 2018
+%     Added ALL case to launch all the matlab components in raven-x
+%      
 %  Examples
 %     Launch_Main - starts ASE_Sedna with the default paths
 %     Launch_Main('src') - same as above
@@ -83,13 +86,9 @@ end
 % ASE_Sedna;
 
 % launch DeLMA
-if strcmpi(mode, 'detect')
-    
-    %     DeLMAGUI;
+if strcmpi(mode, 'detect')    
     if exist('silbido_init')
         silbido_init;
     end
-    
-DeLMA_App;
-    
+    DeLMA_App;
 end
