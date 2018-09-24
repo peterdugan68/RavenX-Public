@@ -1,30 +1,42 @@
 [submodule "auto_detect"]
 	path = auto_detect
-	url = https://peterdugan68@bitbucket.org/peterdugan68/auto_detect.git
-[submodule "utilapps"]
-	path = utilapps
-	url = https://peterdugan68@bitbucket.org/peterdugan68/utilapps.git
+	url = git@bitbucket.org:CLO-BRP/auto_detect.git
 [submodule "rxutils"]
 	path = rxutils
-	url = https://peterdugan68@bitbucket.org/peterdugan68/rxutils.git
+	url = git@bitbucket.org:CLO-BRP/rxutils.git
 [submodule "extern/vlfeat"]
 	path = extern/vlfeat
-	url = https://peterdugan68@bitbucket.org/peterdugan68/vlfeat.git
+	url = git@bitbucket.org:CLO-BRP/vlfeat.git
 [submodule "extern/+asr"]
 	path = extern/+asr
-	url = https://peterdugan68@bitbucket.org/peterdugan68/asr.git
+	url = git@bitbucket.org:CLO-BRP/asr.git
 [submodule "extern/+horiharm"]
 	path = extern/+horiharm
-	url = https://peterdugan68@bitbucket.org/peterdugan68/horiharm.git
+	url = git@bitbucket.org:CLO-BRP/hori_harm.git
 [submodule "extern/+asrpt"]
 	path = extern/+asrpt
-	url = https://peterdugan68@bitbucket.org/peterdugan68/asrpt.git
+	url = git@bitbucket.org:CLO-BRP/asrpt.git
 [submodule "extern/+dtp1d"]
 	path = extern/+dtp1d
-	url = https://peterdugan68@bitbucket.org/peterdugan68/dtp1d.git
+	url = git@bitbucket.org:CLO-BRP/dtp1d.git
 [submodule "extern/+gpl"]
 	path = extern/+gpl
-	url = https://peterdugan68@bitbucket.org/peterdugan68/gpl.git
+	url = git@bitbucket.org:CLO-BRP/gpl.git
 [submodule "extern/silbido"]
 	path = extern/silbido
-	url = https://peterdugan68@bitbucket.org/peterdugan68/silbido.git
+	url = git@bitbucket.org:CLO-BRP/silbido.git
+[submodule "extern/+erma"]
+	path = extern/+erma
+	url = git@bitbucket.org:CLO-BRP/erma.git
+[submodule "extern/+DATpkg"]
+	path = extern/+DATpkg
+	url = git@bitbucket.org:CLO-BRP/datpkg.git
+[submodule "noise_analyzer"]
+	path = noise_analyzer
+	url = git@bitbucket.org:CLO-BRP/noiseanalyzer.git
+[submodule "aena"]
+	path = aena
+	url = git@bitbucket.org:CLO-BRP/aena.git
+[submodule "utilapps"]
+	path = utilapps
+	url = git@bitbucket.org:CLO-BRP/utilapps.git
