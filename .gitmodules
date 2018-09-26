@@ -28,9 +28,6 @@
 [submodule "extern/+erma"]
 	path = extern/+erma
 	url = git@bitbucket.org:CLO-BRP/erma.git
-[submodule "extern/+DATpkg"]
-	path = extern/+DATpkg
-	url = git@bitbucket.org:CLO-BRP/datpkg.git
 [submodule "noise_analyzer"]
 	path = noise_analyzer
 	url = git@bitbucket.org:CLO-BRP/noiseanalyzer.git
