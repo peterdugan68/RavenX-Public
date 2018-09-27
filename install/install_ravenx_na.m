@@ -1,3 +1,4 @@
+function install_RavenX_na(Rxver)
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%   RavenX setup     %%
 %%
@@ -5,22 +6,57 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-% establish a version based on the parent path
-fp = fileparts(pwd);
-bs = fileparts(fp);
-Rxver = fp(length(bs)+2:end);
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-% setup parms
+if nargin < 1
+    
+    % establish a version based on the parent path
+    fp = fileparts(pwd);
+    bs = fileparts(fp);
+    Rxver = fp(length(bs)+2:end);
+    %%%%%%%%%%%%%%%%%%%%%%%%
+end
 pth = pwd;
 sc_cat = [Rxver];
-exe = ['cd (''' pth ''');' 'Launch_Main(''noise'');'];
 
-% install shortcuts (Note: any stale shortcuts will cause this to error) 
-% com.mathworks.mlwidgets.shortcuts.ShortcutUtils.addShortcutToBottom(sc_cat, exe, './checkout.gif', 'ravenx', 'true');
-com.mathworks.mlwidgets.shortcuts.ShortcutUtils.addShortcutToBottom('RavenX-NA', exe, './checkout.gif', sc_cat, 'true');
-ff = com.mathworks.mlservices.MatlabDesktopServices.getDesktop().getQuickAccessConfiguration();
-pth = com.mathworks.toolstrip.factory.TSToolPath('shortcuts','tmp');
-pth = pth.appendTool(sc_cat,'matlab_shortcut_toolset');
-ff.insertTool(0,pth)
-ff.setLabelVisible(pth,true);
+Nme = 'Noise Analyzer';
+Nme = [Rxver '   (' Nme ')'];
+
+% command
+line1 = ['cd (''' pth ''');'];
+line2 = ['Launch_Main(''noise'');'];
+
+v = version('-release');
+
+switch(v)
+    
+    case {'2017a','2017b'}
+        
+                
+        % install shortcuts (Note: any stale shortcuts will cause this to error)
+        com.mathworks.mlwidgets.shortcuts.ShortcutUtils.addShortcutToBottom(Nme, [line1 line2], './checkout.gif', sc_cat, 'true');
+        ff = com.mathworks.mlservices.MatlabDesktopServices.getDesktop().getQuickAccessConfiguration();
+        pth = com.mathworks.toolstrip.factory.TSToolPath('shortcuts','tmp');
+        pth = pth.appendTool(sc_cat,'matlab_shortcut_toolset');
+        ff.insertTool(0,pth)
+        ff.setLabelVisible(pth,true);
+        
+        
+    case {'2018a', '2018b'}
+        
+        favorites = com.mathworks.mlwidgets.favoritecommands.FavoriteCommands.getInstance;
+        favorites.waitUntilReady;
+        fv = com.mathworks.mlwidgets.favoritecommands.FavoriteCommandProperties;
+        fv.setLabel(Nme); %name of favorite
+        fv.setCategoryLabel(sc_cat); %name of folder in favorites
+        %fv.setIconName('Community_16.png'); %icon if desired
+        %fv.setIconPath('path to icons'); %path to icon file if desired
+         fv.setCode(['% Invoke RavenX APP' 10 line1 10 line2]); %code to be run
+        %          fv.setCode(['% Display two lines' 10 'disp(''Hello World 1'')' 10 'disp(''Hello World 2'')']); %code to be run
+        favorites.addCommand(fv); %add to favorites
+        
+    otherwise
+        
+        
+        
+end
+
+
