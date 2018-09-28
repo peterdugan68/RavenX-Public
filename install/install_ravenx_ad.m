@@ -1,3 +1,4 @@
+function install_ravenx_ad(FavCat)
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%   RavenX setup     %%
 %%
@@ -5,18 +6,26 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-addpath(pwd,'-end');
-cd ..
+if nargin < 1
+    
+    % establish a version based on the parent path
+    fp = fileparts(pwd);
+    bs = fileparts(fp);
+    FavCat = fp(length(bs)+2:end);
+    %%%%%%%%%%%%%%%%%%%%%%%%
+end
+
+[~,Base,~] = fileparts(FavCat);
 
 % establish a version based on the parent path
-fp = fileparts(pwd);
-bs = fileparts(fp);
-Rxver = fp(length(bs)+2:end);
+% fp = fileparts(pwd);
+% bs = fileparts(fp);
+% Rxver = fp(length(bs)+2:end);
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 % setup parms
 pth = pwd;
-sc_cat = [Rxver];
+% sc_cat = [Rxver];
 line1 = ['cd (''' pth ''');'];
 line2 = ['Launch_Main(''detect'');'];
 % exe = [line1; line2];
@@ -24,8 +33,8 @@ line2 = ['Launch_Main(''detect'');'];
 v = version('-release');
 
 Nme = ['Auto Detect'];
-FavCat = [sc_cat '\RavenX-AD'];
-Nme = [FavCat '   (' Nme ')'];
+
+Nme = [Base '   (' Nme ')'];
 switch(v)
     
     case {'2017a','2017b'}
@@ -34,7 +43,7 @@ switch(v)
         com.mathworks.mlwidgets.shortcuts.ShortcutUtils.addShortcutToBottom(Nme, [line1 line2], './checkout.gif', FavCat, 'true');
         ff = com.mathworks.mlservices.MatlabDesktopServices.getDesktop().getQuickAccessConfiguration();
         pth = com.mathworks.toolstrip.factory.TSToolPath('shortcuts','tmp');
-        pth = pth.appendTool(sc_cat,'matlab_shortcut_toolset');
+        pth = pth.appendTool(FavCat,'matlab_shortcut_toolset');
         ff.insertTool(0,pth)
         ff.setLabelVisible(pth,true);
         
@@ -56,23 +65,6 @@ switch(v)
         
         
 end
-
-
-% install noise analyzer package
-install_ravenx_na(FavCat);
-
-% install DAT packages;
-install_DATpkg(FavCat);
-
-% install Util packages;
-install_acoustat(FavCat);
-install_detEval(FavCat);
-install_MakeCallcount(FavCat);
-install_MakeListfile(FavCat);
-install_MigrateTriton(FavCat);
-install_RavenSoundSpeedCalculator(FavCat);
-install_SelectionTableApp(FavCat);
-
 
 
 

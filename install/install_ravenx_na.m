@@ -1,4 +1,4 @@
-function install_RavenX_na(Rxver)
+function install_ravenx_na(FavCat)
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%   RavenX setup     %%
 %%
@@ -11,14 +11,16 @@ if nargin < 1
     % establish a version based on the parent path
     fp = fileparts(pwd);
     bs = fileparts(fp);
-    Rxver = fp(length(bs)+2:end);
+    FavCat = fp(length(bs)+2:end);
     %%%%%%%%%%%%%%%%%%%%%%%%
 end
+
+[~,Base,~] = fileparts(FavCat);
+
 pth = pwd;
-sc_cat = [Rxver];
 
 Nme = 'Noise Analyzer';
-Nme = [Rxver '   (' Nme ')'];
+Nme = [Base '   (' Nme ')'];
 
 % command
 line1 = ['cd (''' pth ''');'];
@@ -32,10 +34,10 @@ switch(v)
         
                 
         % install shortcuts (Note: any stale shortcuts will cause this to error)
-        com.mathworks.mlwidgets.shortcuts.ShortcutUtils.addShortcutToBottom(Nme, [line1 line2], './checkout.gif', sc_cat, 'true');
+        com.mathworks.mlwidgets.shortcuts.ShortcutUtils.addShortcutToBottom(Nme, [line1 line2], './checkout.gif', FavCat, 'true');
         ff = com.mathworks.mlservices.MatlabDesktopServices.getDesktop().getQuickAccessConfiguration();
         pth = com.mathworks.toolstrip.factory.TSToolPath('shortcuts','tmp');
-        pth = pth.appendTool(sc_cat,'matlab_shortcut_toolset');
+        pth = pth.appendTool(FavCat,'matlab_shortcut_toolset');
         ff.insertTool(0,pth)
         ff.setLabelVisible(pth,true);
         
@@ -46,7 +48,7 @@ switch(v)
         favorites.waitUntilReady;
         fv = com.mathworks.mlwidgets.favoritecommands.FavoriteCommandProperties;
         fv.setLabel(Nme); %name of favorite
-        fv.setCategoryLabel(sc_cat); %name of folder in favorites
+        fv.setCategoryLabel(FavCat); %name of folder in favorites
         %fv.setIconName('Community_16.png'); %icon if desired
         %fv.setIconPath('path to icons'); %path to icon file if desired
          fv.setCode(['% Invoke RavenX APP' 10 line1 10 line2]); %code to be run
