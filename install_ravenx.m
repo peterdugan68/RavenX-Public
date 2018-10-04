@@ -20,8 +20,15 @@ addpath(install_path,'-end');
 FavCat = fullfile(d,b);
 %%%%%%%%%%%%%%%%%%%%%%%%
 
+ipath = fileparts(which('install_ravenx_ad'));
+while ~strcmp(ipath, install_path)
+    rmpath(ipath);
+    ipath = fileparts(which('install_ravenx_ad'));
+end
+
 % install auto-detector package
 install_ravenx_ad(FavCat);
+
 
 % install noise analyzer package
 install_ravenx_na(FavCat);
