@@ -39,4 +39,4 @@
 	url = git@bitbucket.org:CLO-BRP/utilapps.git
 [submodule "install"]
 	path = install
-	url = https://peterdugan68@bitbucket.org/CLO-BRP/install.git
+	url = git@bitbucket.org:CLO-BRP/install.git
