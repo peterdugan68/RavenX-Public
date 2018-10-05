@@ -90,5 +90,6 @@ if strcmpi(mode, 'detect')
     if exist('silbido_init')
         silbido_init;
     end
+    
     DeLMA_App;
 end
