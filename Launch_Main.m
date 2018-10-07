@@ -102,7 +102,7 @@ if strcmpi(mode, 'detect')
             DeLMA_App_R2018a;            
             
         case {'(R2018b)'}
-            DeLMA_App;            
+            DeLMA_App_R2018b;            
     end
     
 end
