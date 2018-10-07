@@ -91,5 +91,18 @@ if strcmpi(mode, 'detect')
         silbido_init;
     end
     
-    DeLMA_App;
+    v = ver('matlab');
+    
+    switch(v.Release)
+    
+        case {'(R2017a)','(R2017b)'} 
+            DeLMA_App_R2017a;    
+
+        case {'(R2018a)'}
+            DeLMA_App_R2018a;            
+            
+        case {'(R2018b)'}
+            DeLMA_App;            
+    end
+    
 end
