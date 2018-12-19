@@ -31,19 +31,19 @@ install_ravenx_ad(FavCat);
 
 
 % install noise analyzer package
-% install_ravenx_na(FavCat);
+install_ravenx_na(FavCat);
 % 
 % % install DAT packages;
-% install_DATpkg(FavCat);
+install_DATpkg(FavCat);
 % 
 % % install Util packages;
-% install_acoustat(FavCat);
-% install_detEval(FavCat);
-% install_MakeCallcount(FavCat);
-% install_MakeListfile(FavCat);
-% install_MigrateTriton(FavCat);
-% install_RavenSoundSpeedCalculator(FavCat);
-% install_SelectionTableApp(FavCat);
+install_acoustat(FavCat);
+install_detEval(FavCat);
+install_MakeCallcount(FavCat);
+install_MakeListfile(FavCat);
+install_MigrateTriton(FavCat);
+install_RavenSoundSpeedCalculator(FavCat);
+install_SelectionTableApp(FavCat);
 % 
 % 
 % 
