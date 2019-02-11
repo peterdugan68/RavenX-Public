@@ -40,3 +40,6 @@
 [submodule "install"]
 	path = install
 	url = git@bitbucket.org:peterdugan68/install.git
+[submodule "config/+calibpkg"]
+	path = config/+calibpkg
+	url = https://peterdugan68@bitbucket.org/peterdugan68/calibpkg.git
