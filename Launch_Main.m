@@ -53,6 +53,12 @@ function Launch_Main(mode)
 %     Launch_Main('*.mat') - runs a NoiseAnalysis or Detection in batch mode
 %     Launch_Main(<anything else>) - same as 'src'
 
+% change desktop name, to keep things straight
+[pth, nme, ~] = fileparts(pwd);
+mDesktop = com.mathworks.mde.desk.MLDesktop.getInstance;
+mFrame = mDesktop.get('MainFrame');
+mFrame.setTitle(fullfile(pth, nme)); % replace 'MyTitle' with your desired title
+
 if nargin == 0
     mode = 'src';
 end
