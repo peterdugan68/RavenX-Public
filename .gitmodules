@@ -43,3 +43,6 @@
 [submodule "config/+calibpkg"]
 	path = config/+calibpkg
 	url = https://peterdugan68@bitbucket.org/peterdugan68/calibpkg.git
+[submodule "extern/+SegReco"]
+	path = extern/+SegReco
+	url = https://peterdugan68@bitbucket.org/peterdugan68/segreco.git
