@@ -20,6 +20,7 @@ function ravenx_setpath_src(mode)
 %   JZollweg     July 2018          Ver 2.1    Customized for RavenX-NA
 %   PDugan       Sept 2018                     Merged NA and AD for SPAWAR
 %                                              integration.
+%   PDugan       3-5-18                        Simplified path scripts
 
 if ~any(strcmp(mode, {'batch', 'detect', 'display', 'noise', 'all'}))
     mode = 'src';
@@ -86,4 +87,18 @@ if  strcmp(mode, 'batch')
     return
 end
 
+% noise pkg path
+path([hdir, filesep fullfile('aena', 'NoiseReportBrowser')],path);
+path([hdir, filesep fullfile('aena', 'BandAnalyzer')], path);
+path([hdir, filesep fullfile('aena', 'AENA_Utils')], path);
+path([hdir, filesep fullfile('aena', 'AENA_Utils', 'icons')], path);
+
+% auto detect pkg
+path([hdir, filesep fullfile('auto_detect','DCpkgs')],path);
+path([hdir, filesep fullfile('auto_detect','DCL')], path);
+path([hdir, filesep fullfile('auto_detect','RTUtils')], path);
+path([hdir, filesep fullfile('auto_detect','RTUtils', 'FileParser')], path);
+path([hdir, filesep fullfile('auto_detect','RTUtils', 'DeLMA')], path);
+
+% run this for fun.. Displays the BRP splash screen
 utils.BrpInit(hdir, mode)

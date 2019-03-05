@@ -101,11 +101,8 @@ if strcmpi(mode, 'detect')
     
     switch(v.Release)
     
-        case {'(R2017a)','(R2017b)'} 
+        case {'(R2017a)','(R2017b)','(R2018a)'} 
             DeLMA_App_R2017a;    
-
-        case {'(R2018a)'}
-            DeLMA_App_R2018a;            
             
         case {'(R2018b)'}
             DeLMA_App_R2018b;            
