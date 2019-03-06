@@ -43,3 +43,6 @@
 [submodule "extern/+SegReco"]
 	path = extern/+SegReco
 	url = git@bitbucket.org:peterdugan68/segreco.git
+[submodule "auto_detect"]
+	path = auto_detect
+	url = git@bitbucket.org:peterdugan68/auto_detect.git
