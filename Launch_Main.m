@@ -45,6 +45,9 @@ function Launch_Main(mode)
 %
 %   PDugan Sept 2018
 %     Added ALL case to launch all the matlab components in raven-x
+%
+%   PDugan Apr 2019
+%     Added code to paint window title-bar for MATLAB MAIN screen
 %      
 %  Examples
 %     Launch_Main - starts ASE_Sedna with the default paths
@@ -59,11 +62,18 @@ mDesktop = com.mathworks.mde.desk.MLDesktop.getInstance;
 mFrame = mDesktop.get('MainFrame');
 mFrame.setTitle(fullfile(pth, nme)); % replace 'MyTitle' with your desired title
 
+% Move this to the startup script
+% % first restore default path, this might be a pain for other apps, but we
+% % need to make VERY certain that RavenX is alone in this MATLAB session!
+% disp('Restoring MATLAB Default path');
+% restoredefaultpath;
+
+
 if nargin == 0
     mode = 'src';
 end
 
-if strfind(mode, '.mat')
+if contains(mode, '.mat')
     ravenx_setpath_src('batch')
     batchjobs = who('-file', mode);
     load(mode);
@@ -88,24 +98,32 @@ if strcmpi(mode, 'noise')
     return
 end
 
-% launch Sedna
-% ASE_Sedna;
-
 % launch DeLMA
-if strcmpi(mode, 'detect')    
+if strcmpi(mode, 'detect')
+    
     if exist('silbido_init')
         silbido_init;
     end
     
     v = ver('matlab');
-    
     switch(v.Release)
     
         case {'(R2017a)','(R2017b)','(R2018a)'} 
             DeLMA_App_R2017a;    
             
         case {'(R2018b)'}
-            DeLMA_App_R2018b;            
+            DeLMA_App_R2018b;
+            
+        otherwise
+            DeLMA_App_R2019a;
     end
     
 end
+
+if strcmpi(mode, 'SoundAndRateConverter')
+
+    import SoundAndRateConverter.*
+    SoundAndRateConverter;
+    
+end
+    

@@ -16,7 +16,11 @@ addpath(install_path,'-end');
 
 % establish a version based on the parent path
 [a,b,~] = fileparts(pwd);
-[c,d,~] = fileparts(a);
+ind = findstr(a,'\');
+d = a(ind(end)+1:end);
+c = a(1:ind(end)-1);
+ind = findstr(d,')');
+d = d(1:ind(end));
 FavCat = fullfile(d,b);
 %%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -25,6 +29,9 @@ while ~strcmp(ipath, install_path)
     rmpath(ipath);
     ipath = fileparts(which('install_ravenx_ad'));
 end
+
+% install SoundAndRateConverter 
+install_SoundAndRateConverter(FavCat);
 
 % install auto-detector package
 install_ravenx_ad(FavCat);
