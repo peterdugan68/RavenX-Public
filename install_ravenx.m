@@ -15,12 +15,16 @@ end
 addpath(install_path,'-end');
 
 % establish a version based on the parent path
+% establish a version based on the parent path
 [a,b,~] = fileparts(pwd);
 ind = findstr(a,'\');
 d = a(ind(end)+1:end);
 c = a(1:ind(end)-1);
-ind = findstr(d,')');
-d = d(1:ind(end));
+ind1 = findstr(a,'(');
+ind2 = findstr(a,')');
+if ~isempty(ind1) && ~isempty(ind2)
+    d = a(ind1:ind2);
+end
 FavCat = fullfile(d,b);
 %%%%%%%%%%%%%%%%%%%%%%%%
 

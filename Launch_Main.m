@@ -101,9 +101,6 @@ end
 % launch DeLMA
 if strcmpi(mode, 'detect')
     
-    if exist('silbido_init')
-        silbido_init;
-    end
     
     v = ver('matlab');
     switch(v.Release)
