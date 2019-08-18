@@ -15,7 +15,6 @@ end
 addpath(install_path,'-end');
 
 % establish a version based on the parent path
-% establish a version based on the parent path
 [a,b,~] = fileparts(pwd);
 ind = findstr(a,'\');
 d = a(ind(end)+1:end);
