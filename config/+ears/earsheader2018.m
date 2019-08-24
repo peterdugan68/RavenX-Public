@@ -1,13 +1,18 @@
 function fileobj = earsheader2018(fileobj)
-%-------------------------------------------------------------------------
-%	subroutine to read header from G2 EARS data file
-%    it decodes the embedded time code for a record
-%	1 Dec 03 - jjln
+% 
+% fileobj = earsheader2018(fileobj)
 %
-%  The internal GPS is recorded in bytes 7 - 12
-%		The time code starts in the last half of byte 7
-%		A 32kHz clock is used
-%-------------------------------------------------------------------------
+%   input
+%       fileobj - FileSignal Object 
+% 
+% This function is based on JZollweg ReadHeader
+%
+% Copyright 2013-2019 Cornell Lab of Ornithology
+%   PDugan, extracxted code from FileSignal ReadHeader
+%   JZollweg, added case for EARS
+%   Add EARS dev per JAZ - PJD 6/26/2019
+%   Add code to deal with corrupted EARS files  8/15/2019
+%   PJD - Need to verify the block that handles the error case
 
 % Open file
 filename = fileobj.fileName{1};
