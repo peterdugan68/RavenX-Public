@@ -39,6 +39,10 @@ path([extern_dir, filesep, 'vlfeat' filesep, 'toolbox'], path); vl_setup;
 config_dir = [hdir filesep 'config'];
 path([config_dir], path);
 
+% add rxlibs path
+config_dir = [hdir filesep 'rxlibs'];
+path([config_dir], path);
+
 
 % path for auto detect
 if exist('auto_detect', 'dir')
