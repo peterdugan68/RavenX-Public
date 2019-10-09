@@ -22,6 +22,10 @@ function ravenx_setpath_src(mode)
 %                                              integration.
 %   PDugan       3-5-18                        Simplified path scripts
 
+if nargin < 1
+    mode = 'all';
+end
+
 if ~any(strcmp(mode, {'batch', 'detect', 'display', 'noise', 'all'}))
     mode = 'src';
 end
