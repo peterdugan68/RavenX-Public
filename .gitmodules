@@ -46,3 +46,9 @@
 [submodule "auto_detect"]
 	path = auto_detect
 	url = git@bitbucket.org:peterdugan68/auto_detect.git
+[submodule "rxcodec/+shru"]
+	path = rxcodec/+shru
+	url = https://peterdugan68@bitbucket.org/peterdugan68/shru.git
+[submodule "rxcodec/+ears"]
+	path = rxcodec/+ears
+	url = https://peterdugan68@bitbucket.org/peterdugan68/ears.git
