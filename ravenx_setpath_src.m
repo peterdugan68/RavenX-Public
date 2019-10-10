@@ -21,6 +21,8 @@ function ravenx_setpath_src(mode)
 %   PDugan       Sept 2018                     Merged NA and AD for SPAWAR
 %                                              integration.
 %   PDugan       3-5-18                        Simplified path scripts
+%   PDugan       10-5-19                       Phone config
+
 
 if nargin < 1
     mode = 'all';
@@ -44,8 +46,8 @@ config_dir = [hdir filesep 'config'];
 path([config_dir], path);
 
 % add rxlibs path
-config_dir = [hdir filesep 'rxlibs'];
-path([config_dir], path);
+rxlibs_dir = [hdir filesep 'rxlibs'];
+path([rxlibs_dir], path);
 
 
 % path for auto detect
