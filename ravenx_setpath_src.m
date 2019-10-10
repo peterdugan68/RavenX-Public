@@ -49,6 +49,12 @@ path([config_dir], path);
 rxlibs_dir = [hdir filesep 'rxlibs'];
 path([rxlibs_dir], path);
 
+% add rxcodec path
+rxcodec_dir = [hdir filesep 'rxcodec'];
+path([rxcodec_dir], path);
+
+
+
 
 % path for auto detect
 if exist('auto_detect', 'dir')
