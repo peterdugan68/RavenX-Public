@@ -46,6 +46,3 @@
 [submodule "auto_detect"]
 	path = auto_detect
 	url = git@bitbucket.org:peterdugan68/auto_detect.git
-[submodule "phn_config/+calibpkg"]
-	path = phn_config/+calibpkg
-	url = https://peterdugan68@bitbucket.org/peterdugan68/calibpkg.git
